@@ -1,0 +1,29 @@
+<view class="container">
+  <!-- 加载动画 -->
+  <loading flag="{{loadingFlag}}"></loading>
+  <!-- 页面主体 -->
+  <view class='category-container'>
+    <view class='flex-row margin-top'>
+      <view class='category-menu text-center text-normal flex-3'>
+        <!-- 分类 -->
+        <view class="category-cloumn-item {{index==idx?'active':''}}"
+         wx:for="{{categories}}" wx:key="item" data-index='{{index}}'
+         data-id='{{item.id}}'  catchtap='sendClassify'>
+          <view>{{item.name}}</view>
+        </view>
+      </view>
+      <view class='classify-menu text-small text-gray text-center flex-7'>
+        <!-- 内容 -->
+        <view class="classify-item" wx:for="{{classifies}}" wx:key="item" data-item="{{item}}" catchtap="toBook">
+          <!-- 图标放置 -->
+          <view class='icon-area' style='background-image:{{item.iconBack}}'>
+            <text class='iconfont {{item.icon}} icon-size'></text>
+          </view>
+          <view class='margin-bottom'>
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

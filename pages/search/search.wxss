@@ -1,0 +1,10 @@
+/* pages/search/search.wxss */
+@import "/zykt/public/public.wxss";
+/* 搜索 */
+@import "../../wxSearchView/wxSearchView.wxss";
+/* 页面背景 */
+/* 页面主体 */
+.search-container{
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,9 @@
+<view class="container">
+  <!-- 页面主体 -->
+  <view class='index-container'>
+    <view class='logo'>
+    <image class='logo-image' src='/image/index.svg'/>
+  </view>
+  <button class='login-button' open-type="getUserInfo" bindgetuserinfo="login"> 一键登录      </button>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view class='picture-container'>
+  <view class='picture-title text-indent text-weight-md'>
+    <text>{{title}}</text>
+  </view>
+  <view class="margin-top picture-content">
+    <view class="picture-item flex-row" wx:for='{{imageUrl}}' wx:key='item'>
+      <image class='picture-image' src="{{item}}" data-src="{{item}}" data-url='{{imageUrl}}' catchtap='imgYu'/>
+    </view>
+  </view>
+</view>

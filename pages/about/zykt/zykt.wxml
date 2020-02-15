@@ -1,0 +1,22 @@
+<view class="container">
+  <!-- 页面主体 -->
+  <view class='zykt-container'>
+    <view class='zykt-introduce text-black'>
+      <view class='text-center margin-top text-normal'>关于知际星</view>
+      <view class='text-content text-indent'>
+        <view class='margin-top text-weight-lg'>Hi！欢迎使用知际星！</view>
+        <view class='margin-top'>该项目是我们团体开发的有助于大学生学习知识的小程序。其中资料收集大部分来源采摘于互联网公开内容以及个人所学知识汇总（目前正在紧张采集中.....），如有侵权，还请谅解，并且希望您及时联系，我将第一时间删除内容。</view>
+        <view class='margin-top text-weight-lg'>团体初衷：</view>
+        <view class='margin-top'>在尝试收集大学基础课程资料的同时，希望能够提升锻炼自己的能力，也会不定期更新的收集最新各类考题，期待能不断完善的该平台。</view>
+        <view class='margin-top text-weight-lg'>期待：</view>
+        <view class='margin-top'>如果你有一些新的提议可以通过意见反馈来告知我们，我们会尝试加入拓展里，</view>
+        <view class='margin-top'>如果你与我们一样，想要掌握如何去搭建属于自己的小程序，也欢迎访问来到GitHub。</view>
+        <view class='margin-top' style='color:blue' bindtap='copyText' data-text="https://github.com/MaTu-V">https://github.com/MaTu-V</view>
+        <view class='margin-top'>另外，如果您对我们的小程序感兴趣，希望我们可以一起合作！</view>
+        <view class='margin-top text-weight-lg'>参考来源：</view>
+        <view class='margin-top'>此平台项目属于开源，页面部分参考于ColorUI组件库！您也可以去参考该组件库。
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

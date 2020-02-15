@@ -1,0 +1,26 @@
+@import "/zykt/public/public.wxss";
+.picture-container{
+  width: 100%;
+  height: auto;
+}
+.picture-title{
+  width: 98%;
+  margin: 0 auto;
+}
+.picture-content{
+  width: 98%;
+  margin: 0 auto;
+  height: auto;
+}
+.picture-item{
+  width: 100%;
+  height: auto;
+  overflow-y: scroll;
+  margin: 20rpx auto;
+}
+
+.picture-image{
+  width:95%;
+  margin:auto;
+  height:900rpx;
+}

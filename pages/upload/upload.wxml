@@ -1,0 +1,27 @@
+<view class="container">
+  <!-- 页面主体 -->
+  <view class='upload-container flex-column'>
+    <form>
+      <view class='flex-row upload-height border-bottom'>
+        <view class='flex-3 text-label text-center text-weight-lg'>
+          <text>资料名称</text>
+        </view>
+        <view class='flex-7'>
+          <input class='form-control text-normal' bindinput='userInput' placeholder="编辑上传资料名称" auto-focus/>
+        </view>
+      </view>
+      <view class='margin-top'>
+        <view class='file-area'>
+          <view class='tips'>
+            提示：一次仅可上传一张图片哦!
+            <button class='form-button' catchtap='uploadFile'>上传资料</button>
+          </view>
+          <image src='/image/upload.svg' class='back_image'></image>
+        </view>
+      </view>
+      <view class='flex-row-around margin-top'>
+        <view class='submit-button' catchtap='uploadMaterial'>提交</view>
+      </view>
+    </form>
+  </view>
+</view>

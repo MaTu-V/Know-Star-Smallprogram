@@ -1,0 +1,26 @@
+<!-- 标题头 -->
+<view class="header-info" style="height:{{titleBarHeight}}px;padding-top:{{statusBarHeight}}px;background-image:{{back}};color:{{color}}">
+  <!-- 返回键 -->
+  <view class='flex-row'>
+    <view class='flex-1 flex-row-around'>
+      <view wx:if="{{indexFlag}}">
+        <view wx:if="{{flag}}" catchtap='ToSearch'>
+          <text class='iconfont icon-chazhao-cu'></text>
+        </view>
+        <view wx:else>
+          <text class='iconfont icon-arrow-left' catchtap='ToBack'></text>
+        </view>
+      </view> 
+      <view wx:else>
+        <view catchtap='ToHome'>
+          <text class='iconfont icon-index1'></text>
+        </view>
+      </view>
+    </view>
+    <view class='flex-8 flex-row-around'>
+      <text class=""> {{name}} </text>
+    </view>
+    <view class='flex-1 flex-row-around'>
+    </view>
+  </view>
+</view>

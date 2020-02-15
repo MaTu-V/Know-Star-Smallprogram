@@ -1,0 +1,33 @@
+/* pages/about/zykt/zykt.wxss */
+@import "/zykt/public/public.wxss";
+/* 页面主体 */
+page{
+  background: #f6f6f6!important;
+}
+.zykt-container{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.zykt-introduce{
+  background: #fff;
+  width: 90%;
+  height: auto;
+  margin: 50rpx auto;
+  padding:30rpx 0 50rpx 0;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+}
+.text-normal{
+  color: black;
+  font-size: 32rpx;
+}
+.text-content{
+  width: 95%;
+  margin: 0 auto;
+  font-size: 28rpx;
+}
+.text-content view{
+  height: auto;
+  line-height: 165%;
+}

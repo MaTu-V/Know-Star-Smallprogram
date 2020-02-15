@@ -1,0 +1,183 @@
+/* pages/home/home.wxss */
+@import "/zykt/public/public.wxss";
+/* 页面主体 */
+.home-container{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+/* swiper滚动 */
+.home-swiper{
+  width: 100%;
+  height: 270rpx;
+  margin: 15rpx auto 30rpx auto;
+}
+/* 轮播排版 */
+.swiper-content{
+  width: 92%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20rpx;
+  color: #fff;
+}
+/* 轮播左侧图片 */
+.swiper-content .content-image{
+  width: 86%;
+  height: 86%;
+  margin: 7% auto;
+}
+/* 轮播标题 */
+.swiper-content .content-title{
+  margin: 50rpx auto 20rpx auto;
+  font-size: 45rpx;
+}
+/* 轮播标题icon */
+.swiper-content .icon-size{
+  margin-left: 30rpx;
+  font-size: 80rpx;
+}
+
+/* 页面内容展示 */
+.home-show{
+  width: 100%;
+}
+
+/* 最近更新及推荐阅读 */
+.show-newest,.show-recommend{
+  width: 100%;
+  margin: 40rpx auto;
+}
+
+/* 最新数据内容排版 */
+.newest-menu {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  /* margin: 20rpx auto; */
+}
+
+.newest-menu .newest-item{
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.newest-menu .newest-item .text-icon{
+  width: 90rpx;
+  height: 90rpx;
+  margin: 20rpx auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border-radius: 25rpx;
+}
+
+/* icon样式 */
+.newest-menu .newest-item .icon-size{
+  background: transparent;
+  font-size: 50rpx;
+  color: white;
+}
+
+/* 精选推荐排版 */
+.recommend-menu{
+  width: 100%;
+  height: auto;
+  margin: 20rpx auto;
+}
+
+.recommend-menu .recommend-item{
+  width: 95%;
+  border-bottom:1px solid #EEEEEE;
+  margin: 0 auto 25rpx auto;
+}
+
+/* 广告 */
+.recommend-item .home-ad{
+  height: 270rpx;
+  min-height: 270rpx;
+  line-height: 270rpx;
+  border-bottom:2rpx solid #EEEEEE;
+  margin: 0 auto 25rpx auto;
+}
+
+.recommend-item .text-iamge{
+  width: 90%;
+  height: 220rpx;
+  margin: 0 auto;
+}
+
+.recommend-item .text-content{
+  width: 90%;
+  margin: 20rpx auto auto 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+  color: #4C4C4C;
+}
+
+.text-content .text-title{
+  font-size: 32rpx;
+}
+
+.text-content .text-info{
+  margin-top: 30rpx;
+  font-size: #9AA3A7;
+  /* min-height: 170rpx; */
+}
+
+.text-content .text-info .describe,.text-content .text-info .range{
+  font-size: 23.5rpx;
+  margin-bottom:15rpx;
+}
+
+.text-content .text-useInfo{
+  width: 94%;
+  margin: 0 auto 20rpx auto;
+}
+
+.text-content .text-info .describe{
+  color: #666666;
+}
+
+.text-content .text-info .range{
+  color: #999999;
+}
+
+.newest-item:nth-child(1) .text-icon{
+  background: #e54d42;
+}
+
+.newest-item:nth-child(2) .text-icon{
+  background: #f37b1d;
+}
+
+.newest-item:nth-child(3) .text-icon{
+  background: #fbbd08;
+}
+
+.newest-item:nth-child(4) .text-icon{
+  background: linear-gradient(45deg, #39b54a, #8dc63f); 
+}
+
+.newest-item:nth-child(7) .text-icon{
+ background: linear-gradient(45deg, #ff9700, #ed1c24);
+}
+
+.newest-item:nth-child(5) .text-icon{
+  background: #0081ff;
+}
+
+.newest-item:nth-child(6) .text-icon{
+  background: linear-gradient(45deg, #f43f3b, #ec008c);
+}
+
+.newest-item:nth-child(8) .text-icon{
+  background: linear-gradient(45deg, #9000ff, #5e00ff);
+}

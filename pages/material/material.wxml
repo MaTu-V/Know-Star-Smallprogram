@@ -1,0 +1,62 @@
+<view class="container">
+  <!-- 加载动画 -->
+  <loading flag="{{loadingFlag}}"></loading>
+  <!-- 页面主体 -->
+  <view class='material-container'>
+    <view class='book-info border-shadow text-indent'>
+      <view class='title text-weight-md text-black white-space'>
+          <text>{{book.name}} </text><text>{{book.edition}}</text>
+      </view>
+      <view class='introduce text-small'>
+        <view class='flex-6 flex-column-around'>
+          <view>作者：{{book.author != '' ?book.author:"未知"}}</view>
+          <view>出版社：{{book.publisher != '' ?book.publisher:"未知"}}</view>
+          <view>出版日期：{{book.publishTime  != '' ?book.publishTime:"未知"}}</view>
+        </view>
+        <view class='flex-4 text-center margin-bottom'>
+          <image src='{{serverUrl + book.imageUrl}}' class='book-back'></image>
+        </view>
+      </view>
+      <view class='operate text-small flex-row-around'>
+      
+        <view class="{{collectionFlag == true?'active':''}}" data-id='{{book.id}}' catchtap='chooseCollection'>
+          <text>收藏</text>
+          <text class='iconfont icon-xin icon-margin'></text> 
+        </view>
+        <view data-id='{{book.id}}' data-types='0' catchtap='sendMaterialData'>
+          <text>目录</text>
+          <text class='iconfont icon-hebingxingzhuang icon-margin'></text>
+        </view>
+        <view data-id='{{book.id}}' data-types='1' catchtap='sendMaterialData'>
+          <text>习题</text>
+          <text class='iconfont icon-xiti icon-margin'></text>
+        </view>
+        <!-- <view data-id='{{book.id}}' catchtap='sendUpload'>
+          <text>上传</text>
+          <text class='iconfont icon-fabu icon-margin'></text>
+        </view> -->
+        <view>
+          <button class='share-button text-small' open-type="share">
+            <text>分享</text>
+            <text class='iconfont icon-fenxiang icon-margin'></text>
+          </button>
+        </view>
+      </view>
+    </view>
+    <view class='material-info flex-cloumn'>
+      <view wx:if="{{materialsFlag}}">
+        <view wx:for="{{materials}}" wx:key="item" class="materials-item text-center text-black text-normal flex-row" data-item='{{item}}' catchtap='videoClick'>
+          <view class='flex-1'><text class="iconfont icon-dushu"></text></view>
+          <view class='flex-8 text-left text-indent'>{{item.name}}</view>
+          <view class='flex-1'><text class="iconfont icon-left-arrow text-gray"></text></view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class='warning'>
+          <image src='/image/none.svg' class='none-back'></image>
+          <text class='text-small text-gray text-center margin-top'>还未收集到相关资料~</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

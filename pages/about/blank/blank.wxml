@@ -1,0 +1,16 @@
+<view class="container">
+  <!-- 页面主体 -->
+  <view class='blank-container'>
+    <view class='blank-introduce text-black'>
+      <view class='text-center margin-top text-normal text-weight-lg'>Warning</view>
+      <view class='text-content text-indent'>
+        <view class='margin-top text-weight-lg'>Hi！非常抱歉！该内容正在搭建中。。。</view>
+      </view>
+      <view class='margin-top'>
+          <view>
+            <image src='/image/blank.svg' class='blank-size'></image>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

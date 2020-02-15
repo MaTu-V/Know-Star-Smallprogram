@@ -1,0 +1,99 @@
+<view class="container">
+  <!-- 加载动画 -->
+  <loading flag="{{loadingFlag}}"></loading>
+  <!-- 页面主体 -->
+  <view class='home-container'>
+    <!-- swiper滚动 -->
+    <swiper class='home-swiper' autoplay='true' interval='3000' circular='true'>
+      <!-- 渲染本地数据 -->
+      <swiper-item  wx:for="{{series}}" wx:key="item">
+      <!-- 绑定当前的indnx交给触发事件 -->
+        <view class='swiper-content flex-row' style="background-image:{{item.back}}" data-item='{{item}}' catchtap='toCategory'>
+          <view class='flex-4 text-center'>
+            <image src='{{serverUrl + item.imageUrl}}' class='content-image'></image>
+          </view>
+          <view class='flex-6 text-center'>
+              <view class='content-title'>
+                <text class='text-weight-md'>{{item.name}}</text>
+                <text class='text-normal'> 课程 </text>
+                <text class="iconfont {{item.icon}} icon-size"></text>
+              </view>
+              <view class='content-describe text-normal'>{{item.describe}}</view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <!-- 页面数据 -->
+    <view class='home-show flex-cloumn'>
+      <!-- 展示最近更新 -->
+      <view class='show-newest flex-cloumn'>
+        <!-- 最新数据标题  -->
+        <view class='newest-title text-indent text-middle'>
+          <text class='text-weight-md'>常用科目</text>
+        </view>
+        <!-- 最新数据内容  -->
+        <view class='newest-menu text-black text-small text-center'>
+          <view class='newest-item' wx:for="{{newest}}" wx:key="item"
+          data-item='{{item}}' catchtap='toBook'>
+            <text class='text-icon iconfont {{item.icon}} icon-size'></text>
+            <text class='text-titles white-space'>{{item.name}}</text>
+          </view>
+        </view>
+      </view>
+       <!-- 展示推荐书籍 -->
+      <view class='show-recommend flex-cloumn'>
+        <!-- 推荐标题  -->
+        <view class='recommend-title text-indent text-middle'>
+          <text class='text-weight-md'>精选推荐</text>
+        </view>
+        <!-- 推荐内容 -->
+        <view class='recommend-menu flex-cloumn'>
+          <view class='recommend-item'
+            wx:for="{{recommend}}" wx:key="item"
+            data-item='{{item}}' catchtap='toMaterial'>
+              <!-- qq广告接入 微信暂时不可以 -->
+      <!-- <ad class='home-ad' wx:if='{{index%3===0 &&index!=0}}' unit-id="0b5da17404473c7a4c662d0c2d8e055b"></ad> -->
+            <view class='flex-row-around'>
+              <!-- 图片 -->
+              <view class='flex-3'>
+                <image src='{{serverUrl + item.imageUrl}}' class='text-iamge'></image>
+              </view>
+              <!-- 内容 -->
+              <view class='flex-7 text-normal text-content'>
+                <view class='text-title text-weight-md'>{{item.name}} {{item.edition}}</view>
+                <view class='text-info'>
+                  <view class='describe flex-row'>
+                    <text class='flex-10'>作者:  {{item.author || '暂无'}}</text>
+                    <!-- <text class='flex-8'>{{item.author || '暂无'}}</text> -->
+                  </view>
+                  <view class='describe flex-row'>
+                    <text class='flex-10'>出版社: {{item.publisher || '暂无'}}</text>
+                    <!-- <text class='flex-8'>{{item.publisher || '暂无'}}</text> -->
+                  </view>
+                  <!-- <view class='describe flex-row'> -->
+                    <!-- <text class='flex-6 text-left'>书籍版本: {{item.edition || '未知'}}</text> -->
+                    <!-- <text class='flex-4 text-right'><text class='text-weight-md'>{{item.collectionNumber || '0'}}</text>人在读</text> -->
+                    <!-- <text class='flex-8'>{{item.edition || '未知'}}</text> -->
+                  <!-- </view> -->
+                   <!-- <view class='describe flex-row'> -->
+                    <!-- <text class='flex-10'>已浏览: {{item.collectionNumber || '0'}}</text> -->
+                    <!-- <text class='flex-8'>{{item.edition || '未知'}}</text> -->
+                  <!-- </view> -->
+                </view>
+                <view class='text-useInfo text-small'>
+                  <!-- <text class='flex-6 text-left text-red'>{{item.publisher}}</text> -->
+                  <text style='float:right;'>
+                    <text class='text-weight-md'>{{item.collectionNumber}}</text> 人在读
+                  </text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='book-area text-center text-gray text-small' style='padding-bottom:20rpx' wx:if="{{noneFlag}}">
+    童鞋，木有更多推荐啦，去看看别人在看什么吧！
+  </view>
+</view>

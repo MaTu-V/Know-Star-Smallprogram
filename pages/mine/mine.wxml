@@ -1,0 +1,103 @@
+<view class="container">
+  <!-- 加载动画 -->
+  <loading flag="{{loadingFlag}}"></loading>
+  <!-- 用户信息 -->
+  <view class='user-panel'>
+   <!-- 背景图 -->
+    <image class='user-image' src='/image/userback.jpg'/>
+    <!-- 遮罩层 -->
+    <view class='user-image-shade'></view>
+    <!-- 用户头像昵称 -->
+    <view class="userInfo">
+      <open-data type="userAvatarUrl"></open-data>
+      <view class='text-center userNickName' style='width:100%;'>
+        <open-data type="userNickName" class="user-name text-white text-weight-md white-space" style='width:70%;margin:auto;text-shadow: 0 0 3px rgba(100, 33, 33, 0.3);'>
+        </open-data>
+        <!-- <view wx:if='{{qianFlag}}' class="userQian iconfont icon-qiandao1 text-black" catchtap='userQian'></view> -->
+      </view>
+    </view>
+    <!-- 用户访问 -->
+    <view class="userData flex-row text-center">
+      <view class="flex-cloumn flex-5 border-right" catchtap='toCollection'>
+        <view class='text-small text-gray'>收藏</view>     
+        <view class='margin-top'>
+          <text class='text-weight-md text-normal-number'>{{userInfo.collection || 0}} </text>
+          <text class='text-gray text-small'> 个</text>
+        </view>
+      </view>
+      <view class="flex-cloumn flex-5 border-right">
+        <view class='text-small text-gray'>积分</view>
+        <view class='margin-top'>
+          <text class='text-weight-md text-normal-number'>{{userInfo.energy || 0}}</text>
+          <text class='text-gray text-small'> 点</text>
+        </view>
+      </view>
+     
+     <!-- <view class="flex-cloumn flex-3" catchtap='toPublish'>
+        <view class='text-weight-md text-normal-number'>{{userInfo.publish || 0}}</view>
+        <view class="margin-top text-small">发布</view>
+      </view> -->
+    
+    </view>
+  </view>
+  <!-- 菜单栏 -->
+  <view class="user-menu radius text-gray text-small text-center">
+    <view class="us-item" catchtap="clearMessage">
+      <view class="flex-row">
+        <view class='flex-1'>
+          <text class="iconfont icon-qingchuhuancun"></text>
+        </view>
+        <view class='flex-8 text-left boreder-dashed'>
+          <text>清除缓存</text>
+        </view>
+        <view class='flex-1 boreder-dashed'>
+          <text class="iconfont icon-left-arrow"></text>
+        </view>
+      </view>
+    </view>
+    <view class="us-item">
+      <button class='mine-button text-normal' open-type='contact' hover-class='none'>
+        <view class="flex-row">
+          <view class='flex-1'>
+            <text class="text-gray iconfont icon-yijianfankui"></text>
+          </view>
+          <view class='flex-8 text-left boreder-dashed'>
+            <text class='text-gray text-small'>意见反馈</text>
+          </view>
+          <view class='flex-1 boreder-dashed'>
+            <text class="iconfont icon-left-arrow"></text>
+          </view>
+        </view>
+      </button>
+    </view>
+    <view class="us-item">
+      <navigator class="content" url="/pages/about/zykt/zykt" hover-class="none">
+        <view class="flex-row">
+          <view class='flex-1'>
+            <text class="iconfont icon-guanyu"></text>
+          </view>
+          <view class='flex-8 text-left boreder-dashed'>
+            <text>关于知际星</text>
+          </view>
+          <view class='flex-1 boreder-dashed'>
+            <text class="iconfont icon-left-arrow"></text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="us-item">
+        <view class="flex-row" bindtap='copyText' data-text="https://github.com/MaTu-V">
+          <view class='flex-1'>
+            <text class="iconfont icon-github"></text>
+          </view>
+          <view class='flex-8 text-left'>
+            <text>GitHub</text>
+          </view>
+          <view class='flex-1'>
+            <text class="iconfont icon-left-arrow"></text>
+          </view>
+        </view>
+    </view>
+  </view>
+  <view class='text-center text-gray text-small' style='width:100%;'>知际星-star v1.0.1</view>
+</view>

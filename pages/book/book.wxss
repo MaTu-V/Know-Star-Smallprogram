@@ -1,0 +1,81 @@
+/* pages/category/category.wxss */
+@import "/zykt/public/public.wxss";
+/* 页面主体 */
+.book-container{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* 精选推荐排版 */
+.book-menu{
+  width: 100%;
+  height: auto;
+  margin: 20rpx auto;
+}
+
+.book-menu .book-item{
+  width: 95%;
+  border-bottom:1px solid #EEEEEE;
+  margin: 0 auto 25rpx auto;
+}
+
+/* 广告 */
+.book-item .book-ad{
+  height: 270rpx;
+  min-height: 270rpx;
+  line-height: 270rpx;
+  border-bottom:2rpx solid #EEEEEE;
+  margin: 0 auto 25rpx auto;
+}
+
+.book-item .text-iamge{
+  width: 90%;
+  height: 220rpx;
+  margin: 0 auto;
+}
+
+.book-item .text-content{
+  width: 90%;
+  margin: 20rpx auto auto 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+  color: #4C4C4C;
+}
+
+.text-content .text-title{
+  font-size: 32rpx;
+}
+
+.text-content .text-info{
+  margin-top: 30rpx;
+  font-size: #9AA3A7;
+  /* min-height: 170rpx; */
+}
+
+.text-content .text-info .describe,.text-content .text-info .range{
+  font-size: 23.5rpx;
+  margin-bottom:15rpx;
+}
+
+.text-content .text-useInfo{
+  width: 94%;
+  margin: 0 auto 20rpx auto;
+}
+
+.text-content .text-info .describe{
+  color: #666666;
+}
+
+.text-content .text-info .range{
+  color: #999999;
+}
+
+
+/* 暂无信息提示 */
+.book-area{
+  width: 90%;
+  margin: 10rpx auto 20rpx auto;
+}

@@ -1,0 +1,63 @@
+/* pages/category/category.wxss */
+@import "/zykt/public/public.wxss";
+/* 页面主体 */
+.subject-container{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction:row;
+}
+.category-menu{
+  height: 100vh;
+  overflow-y:scroll;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  margin-left:2rpx;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+.category-cloumn-item{
+  padding: 35rpx 0;
+}
+
+/**
+右侧分类内容
+**/
+
+.classify-menu{
+  display: grid;
+  width: 100%;
+  overflow-y:scroll;
+  height: 100vh;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  align-content: start; 
+}
+.classify-item{
+  display: inline-block;
+  width: 100%;
+  border: none;
+}
+
+.icon-area{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+  background: #fff;
+}
+/* icon样式 */
+.icon-size{
+  background: transparent;
+  font-size: 65rpx;
+  color: white;
+}
+
+.active view{
+  width:100%;
+  color:red;
+  border-left: 8rpx solid red;
+}

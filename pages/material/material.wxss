@@ -1,0 +1,102 @@
+/* pages/materials/materials.wxss */
+@import "/zykt/public/public.wxss";
+page{
+  background: #f9f9f9!important;
+}
+/* 页面主体 */
+.material-container{
+  width: 100%;
+  height: auto;
+}
+/* 书籍信息 */
+.book-info{
+  width: 100%;
+  height: 480rpx;
+  margin: 0 auto 20rpx auto;
+  overflow: hidden;
+  background: #fff;
+  font-size: 38rpx;
+}
+/* 书籍标题 */
+.title{
+  width: 98%;
+  margin: 0 auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-bottom: 10rpx;
+}
+/* 书籍介绍 */
+.introduce{
+  width: 100%;
+  margin: 0 auto;
+  height: 300rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.operate{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+/* 书籍封面 */
+.book-back{
+  width: 80%;
+  height: 100%;
+  margin-right: 20%;
+  border-radius: 20rpx;
+}
+input{
+  outline:none; 
+  border:none;
+  list-style: none;
+}
+.share-button,.share-button::after{
+  border: none;
+  background: none;
+  padding: 0;
+  line-height: inherit;
+}
+/* 资料信息 */
+.material-info{
+  width: 92%;
+  height: auto;
+  margin: 0 auto;
+  /* overflow: hidden; */
+  border-radius: 20rpx;
+}
+/* 资料列表 */
+.materials-item{
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  margin: 35rpx auto;
+}
+.book-image{
+  width: 100%;
+  height: 100%;
+}
+.icon-margin{
+  margin-left: 25rpx;
+}
+/* 无数据样式 */
+.warning{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.none-back{
+  display: block;
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto;
+}
+/* 分享及收藏 */
+.active{
+  color: red;
+}

@@ -1,0 +1,13 @@
+<!--zykt/compontent/loading/loading.wxml-->
+<!--pages/loading/loading.wxml-->
+<view class="loading" wx:if="{{flag}}">
+	<view class="loading-center">
+		<view class="loading-center-absolute">
+			<view class="object object_one"></view>
+			<view class="object object_two"></view>
+			<view class="object object_three"></view>
+			<view class="object object_four"></view>
+		</view>
+	</view>
+</view>
+

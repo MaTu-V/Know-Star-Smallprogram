@@ -1,0 +1,11 @@
+<!--zykt/compontent/none/none.wxml-->
+<view class="none flex-cloumn" wx:if="{{flag}}">
+	<image class='none-image' src='/image/noneSearch.svg'></image>
+	<view class='none-title text-center'>
+	  <text>{{title}}</text>
+	</view>
+	<view class='none-title text-center' catchtap='tohome'>
+	  <text class='back-btn'>返回首页</text>
+	</view>
+</view>
+

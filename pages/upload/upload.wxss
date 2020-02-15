@@ -1,0 +1,66 @@
+/* pages/upload.wxss */
+@import "/zykt/public/public.wxss";
+page{
+  background: #fff;
+}
+/* 页面主体 */
+.upload-container{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.upload-height{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.text-label{
+  font-size: 35rpx;
+}
+.file-area{
+  width: 100%;
+  height: 700rpx;
+  position: relative;
+}
+.file-area .tips{
+  width: auto;
+  position: absolute;
+  font-size: 26rpx;
+  color: rgba(128, 128, 128, .8);
+  /* color: #38d39f; */
+  top: 180rpx;
+  left: 80rpx;
+}
+.file-area .form-button{
+  width: 250rpx;
+  border-radius: 20rpx;
+  margin: 20rpx auto;
+  background: transparent;
+  color: rgba(255, 226, 8, 1);
+}
+.file-area .form-button::after{
+  border: none!important;
+}
+.file-area .back_image{
+  position: absolute;
+  bottom: 0;
+  right: 50rpx;
+  width: 52%;
+  height: 52%;
+}
+.form-control{
+  width: 98%;
+  height: 100%;
+}
+.submit-button{
+  width: 75%;
+  margin: 0 auto;
+  padding: 25rpx 0;
+  border: none;
+  border-radius: 80rpx;
+  background: rgba(255, 226, 8, 1);
+  color: black;
+  font-size: 35rpx;
+  text-align: center;
+  font-weight: 600;
+  line-height: inherit;
+}

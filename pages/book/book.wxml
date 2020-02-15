@@ -1,0 +1,38 @@
+<view class="container">
+  <!-- 加载动画 -->
+  <loading flag="{{loadingFlag}}"></loading>
+  <!-- 信息暂无 -->
+  <none flag='{{noneSearchFlag}}' title='{{noneSearchTitle}}'></none>
+  <!-- 页面主体 -->
+  <view class='book-container'>
+    <view class='book-menu flex-cloumn'>
+      <!-- 渲染本地数据 -->
+      <view wx:for="{{books}}" wx:key="item" class='book-item' data-item="{{item}}" catchtap='toMaterial'>
+        <!-- qq广告接入 微信暂时不可以 -->
+      <!-- <ad class='book-ad' wx:if='{{index%3 === 0 && index != 0}}' unit-id="62381f1b6b793667b91e8cf9de7362db" type="feeds"></ad> -->
+      <view class=' flex-row'>
+        <!-- 图片 -->
+        <view class='flex-3'>
+          <image src='{{serverUrl + item.imageUrl}}' class='text-iamge'></image>
+        </view>
+        <!-- 内容 -->
+        <view class='flex-7 text-normal text-content'>
+          <view class='text-title text-weight-md'>{{item.name}} {{item.edition}}</view>
+          <view class='text-info'>
+            <view class='describe flex-row'>
+              <text class='flex-10'>作者:  {{item.author || '暂无'}}</text>
+            </view>
+            <view class='describe flex-row'>
+              <text class='flex-10'>出版社: {{item.publisher || '暂无'}}</text>
+            </view>
+          </view>
+          <view class='text-useInfo text-small'><text style='float:right;'><text class='text-weight-md'>{{item.collectionNumber}}</text> 人在读</text></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='book-area text-center text-gray text-small' wx:if="{{noneFlag}}">
+      书籍资料到底了.如未找到您所查找书籍.在意见反馈中提议.我们将积极采纳.
+    </view>
+  </view>
+</view>

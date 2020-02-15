@@ -1,0 +1,124 @@
+/* pages/mine/mine.wxss */
+@import "/zykt/public/public.wxss";
+
+page{
+  background: #F9F9F9!important;
+}
+.container{
+  width: 100%;
+  height: 101%;
+  overflow-x:scroll;
+}
+.user-panel{
+  width: 100%;
+  height: 640rpx;
+  min-height: 640rpx;
+  position: relative;
+}
+
+.user-panel .user-image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -99999;
+}
+
+.user-image-shade{
+  width:100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  z-index: -99998;
+  background: rgba(0,0,0,.1);
+}
+
+.userInfo,.userQian,.userData{
+  z-index: 2!important;
+}
+
+.userInfo{
+  width: 100%;
+  height: 600rpx;
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userNickName{
+  width:100%;
+  position:relative;
+}
+
+.userNickName .userQian{
+  position:absolute;
+  top: 0;
+  right: 4%;
+  width:auto;
+  padding: 15rpx;
+  font-size: 36rpx;
+  background: white;
+  border-radius: 50%;
+}
+
+.userData{
+  width:80%;
+  position:absolute;
+  left:10%;
+  right:10%;
+  bottom: 20rpx;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20rpx 0;
+  background:white;
+  border-radius: 20rpx;
+}
+
+/* 自定义 */
+open-data[type="userAvatarUrl"]{
+  width: 140rpx;
+  height: 140rpx;
+  margin-bottom: 20rpx;
+  border-radius: 50%;
+  border:8rpx solid #FFFFFF;
+  overflow: hidden;
+}
+
+/* 菜单栏 */
+.user-menu{
+  width: 92%;
+  margin: 30rpx auto 30rpx auto;
+  height: auto;
+  overflow: hidden;
+  background: white;
+}
+
+.us-item{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.icon-logo{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+/* 客服对话按钮 */
+input{
+  outline:none; 
+  border:none;
+  list-style: none;
+}
+
+.mine-button,.mine-button::after{
+  border: none;
+  background: none;
+  padding: 0;
+  line-height: inherit;
+}

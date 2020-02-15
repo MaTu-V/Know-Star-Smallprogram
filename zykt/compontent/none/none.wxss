@@ -1,0 +1,22 @@
+/* zykt/compontent/loading/loading.wxss */
+@import "/zykt/public/public.wxss";
+
+.none{
+  width: 100%;
+  height: auto;
+}
+
+.none .none-image{
+  width: 50%;
+  height: 400rpx;
+  margin: 10% 25% 0 25%; 
+}
+
+.none .none-title{
+  font-size: 26rpx;
+  color: rgba(128, 128, 128, .8);
+}
+
+.none-title .back-btn{
+  color:#74B0ED!important;
+}

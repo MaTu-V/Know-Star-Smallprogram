@@ -1,0 +1,83 @@
+/* pages/category/category.wxss */
+@import "/zykt/public/public.wxss";
+/* 页面主体 */
+.category-container{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+/* 布局方案1 */
+.category-row-menu{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  overflow-x: scroll;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+.category-row-item{
+  font-size: 28rpx;
+  padding: 15rpx 30rpx;
+  white-space: nowrap;
+  margin: 10rpx 30rpx;
+}
+
+.classify-menu{
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  align-content: start; 
+}
+.classify-item{
+  display: inline-block;
+  width: 100%;
+  border: none;
+}
+
+.icon-area{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+  background: #fff;
+}
+/* icon样式 */
+.icon-size{
+  background: transparent;
+  font-size: 65rpx;
+  color: white;
+}
+/* 导航条单元选中 */
+.active{
+  color: black;
+  border-radius: 35rpx;
+  background:rgba(255, 226, 8, 1);
+}
+
+/* 方案二 */
+.category-cloumn-menu{
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  color: #eee;
+}
+
+.category-cloumn-item{
+  width: 95%;
+  min-height: 120rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  word-wrap:break-word;
+}

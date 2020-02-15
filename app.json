@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/index/index",
+    "pages/material/material",
+    "pages/search/search",
+    "pages/category/category",
+    "pages/subject/subject",
+    "pages/book/book",
+    "pages/about/zykt/zykt",
+    "pages/about/blank/blank",
+    "pages/upload/upload",
+    "pages/picture/picture"
+  ],
+  "tabBar": {
+    "color": "#7E7E7E",
+    "selectedColor": "#39b54a",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "/image/home_act.png",
+        "text": "首页"
+      },
+       {
+        "pagePath": "pages/subject/subject",
+        "iconPath": "image/category.png",
+        "selectedIconPath": "/image/category_act.png",
+        "text": "科目"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "image/search.png",
+        "selectedIconPath": "/image/search_act.png",
+        "text": "快搜"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "image/mine.png",
+        "selectedIconPath": "image/mine_act.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "知际星",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "header": "/zykt/compontent/header/header",
+    "loading": "/zykt/compontent/loading/loading",
+    "none": "/zykt/compontent/none/none"
+  },
+  "sitemapLocation": "sitemap.json"
+}

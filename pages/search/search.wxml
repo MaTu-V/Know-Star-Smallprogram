@@ -1,0 +1,7 @@
+<view class="container">
+  <!-- 页面主体 -->
+  <view class='search-container'>
+    <!-- 导入搜索内容 -->
+    <include src="../../wxSearchView/wxSearchView.wxml" />
+  </view>
+</view>
